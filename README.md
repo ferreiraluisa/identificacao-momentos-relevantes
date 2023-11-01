@@ -7,6 +7,7 @@
 
 <h2 align = "center"> Identificação de momentos relevantes em vídeos de força de segurança
  </h2>
+ 
 ## Resumo
 O trabalho propõe uma solução para automatização de identificação de momentos rele-
 vantes em vídeos de força de segurança, no contexto do Brasil, em gravações das câmeras
