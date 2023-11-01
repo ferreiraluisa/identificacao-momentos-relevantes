@@ -17,7 +17,7 @@ longos, com ferramentas focadas em direcionar a visualização para as partes re
 vídeo.
 
 ## Apresentações
-[Apresentação 01](https://docs.google.com/presentation/d/1NVzNI3c1YIMRdeoUb1FU5xx8aukoAmT51abF-LOQeoU/present?usp=sharing)
+[Apresentação 01](https://docs.google.com/presentation/d/1NVzNI3c1YIMRdeoUb1FU5xx8aukoAmT51abF-LOQeoU/present?usp=sharing) <br>
 [Apresentaçao 02](https://docs.google.com/presentation/d/1XQawjQF3b-injrrN9ToZB9NO3Rr0Dlp2RZndsKB881I/present?usp=sharing)
 
 ## Responsáveis
