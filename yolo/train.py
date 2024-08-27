@@ -1,16 +1,12 @@
-from ultralytics import YOLO
+from ultralytics import YOLOv10 as YOLO
 
 #check torch using gpu, device
 import torch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
 
-model = YOLO('weights/yolov8n.pt')
+model = YOLO.from_pretrained('jameslahm/yolov10m')
 
-#https://github.com/orgs/ultralytics/discussions/3276
-freeze_layers = range(24)  # Layers to freeze (0-23 for YOLOv8)
-for name, param in model.named_parameters():
-    if any(f'model.{layer}.' in name for layer in freeze_layers):
-        param.requires_grad = False
+# model = YOLO('yolov10/runs/detect/yolos_mgd_30_puro/weights/best.pt')
 
-model.train(data='dataset/weapon/data.yaml', epochs=100, imgsz=640, device=device)
+model.train(data='mgd/data.yaml', epochs=30, batch=8, device=device)
