@@ -5,19 +5,21 @@ from pydub import AudioSegment
 from pydub.playback import play
 
 filename = sys.argv[1]
-model = whisper.load_model("base")
-result = model.transcribe("audios/" + filename, language="portuguese", temperature=0.2)
+model = whisper.load_model("medium")
+result = model.transcribe(filename, language="portuguese", temperature=0.4)
 
 
+print('começou agora')
 start_time = 0
 for segment in result["segments"]:
-    start_time = abs(segment["start"] - start_time)
-    time.sleep(start_time)
     print(segment["text"])
-    time.sleep(segment["end"] - segment["start"])
-    start_time = segment["end"]
+    # start_time = abs(segment["start"] - start_time)
+    # time.sleep(start_time)
+    # print(segment["text"])
+    # time.sleep(segment["end"] - segment["start"])
+    # start_time = segment["end"]
 
-
+# print(result)
 # define a palavra que você quer procurar
 palavras = ["peça", "polícia", "arma", "assalto", "machucado"]
 # print(result['text'])
